@@ -1,0 +1,43 @@
+<div class="cont">
+  <h2>Contact Me</h2>
+  <form #myForm="ngForm">
+    <h2>{{ myForm.value | json }}</h2>
+    <div class="information">
+      <div class="label_input">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          [(ngModel)]="myForm.name"
+          required
+          minlength="2"
+          pattern="[A-Za-z ]+"
+        />
+      </div>
+      <div class="label_input">
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          name="email"
+          ngModel
+          required=""
+          pattern="[a-zA-z0-9\.]+@[a-zA-Z]+\.[a-z]+"
+          minlength="5"
+        />
+      </div>
+      <div class="label_input">
+        <label for="subject"> subject (optional)</label>
+        <input type="text" name="subject" id="" ngModel />
+      </div>
+    </div>
+    <textarea
+      name="message"
+      id=""
+      placeholder="Your message"
+      cols="30"
+      rows="10"
+      ngModel
+    ></textarea>
+  </form>
+</div>

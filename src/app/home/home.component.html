@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="intro-text">
+    <span class="line1">Hello! I'm</span>
+    <div class="full_name">
+      <span class="first">Sascha</span> <span class="last">Brodmann</span>
+    </div>
+    <span class="intro" d
+      >{{ descriptor }}
+
+      <div
+        class="intro-animate"
+        [@descriptorTransition]="
+          descriptorTransition % 2 === 0 ? 'right' : 'left'
+        "
+      ></div
+    ></span>
+  </div>
+  <div class="intro-box">
+    <div class="pitch">
+      <h3>With my <span class="skills highlight">Skills</span></h3>
+      <p>I build digital experiences for a digital world</p>
+    </div>
+    <div class="pitch bottom">
+      <h3>
+        Look at My <span class="projects highlight">Projects</span> to see
+      </h3>
+      <p>What I'm working on</p>
+    </div>
+  </div>
+</div>

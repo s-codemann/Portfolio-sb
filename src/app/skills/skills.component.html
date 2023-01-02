@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="skills_header">
+    The <span class="skills">Skills</span> I'm working with
+  </h2>
+  <div class="skills_container">
+    <div class="skills_description">
+      <div class="img_cont"><img src="{{ skillImgLink }}" alt="" /></div>
+      <p>{{ skillDescription }}</p>
+    </div>
+    <div class="skills_selection">
+      <div
+        *ngFor="let skill of skills"
+        class="skill"
+        (click)="selectSkill(skill)"
+        [class.focused]="skill.focused"
+      >
+        <img src="{{ skill.skillImgLink }}" alt="" /><span>{{
+          skill.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

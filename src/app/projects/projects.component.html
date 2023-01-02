@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>The <span>Projects</span> I've built</h2>
+  <div class="projects_filter">
+<div class="filter_button" [class.highlightBtn]="highlightAll" (click)="filterProjects('all')">ALL</div>
+    <div class="filter_button"[class.highlightBtn]="highlightAngular" (click)="filterProjects('angular')">ANGULAR</div>
+    <div class="filter_button"[class.highlightBtn]="highlightJavascript" (click)="filterProjects('javascript')">
+      JAVASCRIPT
+    </div>
+  </div>
+  <div class="projects">
+    <div *ngFor="let project of filteredProjects" class="project">
+      <img src="{{ project.imgLink }}" alt="" />
+      <span>{{ project.name }}</span>
+      <div class="button">Github</div>
+      <div class="button">Live Demo</div>
+    </div>
+  </div>
+</div>
